@@ -1,0 +1,52 @@
+Hoạt động 2:
+1. Sự khác biệt giữa chạy file .py và gõ trực tiếp trong REPL:
+Chạy file .py: Mã lệnh được viết sẵn và lưu lại trong file. Khi chạy bằng lệnh python file.py thì chương trình sẽ chạy từ trên xuống dưới. Cách này dùng để làm các bài lớn, lưu code lại sửa và dùng sau này.
+Gõ trong REPL: Là chạy trực tiếp trên terminal. Gõ dòng nào Python chạy và in kết quả ngay dòng đó. Cách này tiện để test nhanh lệnh ngắn, nhưng tắt terminal đi là mất code.
+
+2. Khi nào nên dùng Jupyter Notebook thay vì file .py thông thường:
+Dùng Jupyter Notebook khi làm về phân tích dữ liệu, machine learning hoặc làm bài báo cáo cần kết hợp gõ code, vẽ biểu đồ và ghi chú thích.
+Dùng file .py khi viết chương trình, phần mềm, ứng dụng web hoặc script cần chạy tự động trên máy.
+
+Hoạt động 3:
+Bài 3.1 - Soi lỗi đặt tên:
+1diem: Sai (bắt đầu bằng số)
+gia-tri: Sai (dùng dấu gạch ngang -)
+_tam_thoi: Đúng (bắt đầu bằng dấu gạch dưới ok)
+Diem_TB: Đúng (nhưng theo chuẩn PEP8 nên viết chữ thường diem_tb)
+class: Sai (trùng với từ khóa class của Python)
+so luong: Sai (có khoảng trắng)
+MAX_SPEED: Đúng (dùng viết hằng số)
+diemTB: Đúng (đặt theo camelCase)
+2024_data: Sai (bắt đầu bằng số)
+tong$: Sai (chứa ký tự đặc biệt $)
+sinhVien1: Đúng (có số ở cuối)
+
+=> Đúng gồm: _tam_thoi, Diem_TB, MAX_SPEED, diemTB, sinhVien1
+=> Sai gồm: 1diem, gia-tri, class, so luong, 2024_data, tong$
+
+Bài 3.2
+Đặt tên biến: ten, diem_toan, diem_van, so_luong_mon_hoc
+Hằng số: MUC_LUONG_TOI_THIEU
+
+Hoạt động 4:
+1. Đặt tên biến class = 5 bị lỗi gì:
+Python báo lỗi SyntaxError: invalid syntax.
+Giải thích: Do "class" là từ khóa reserved của Python dùng để khai báo lớp. Trình thông dịch không hiểu được cú pháp gán số 5 cho từ khóa này nên báo lỗi.
+
+2. Vì sao True, False, None là từ khóa chứ không phải định danh thông thường:
+Vì True, False, None đại diện cho các giá trị cố định nguyên bản của Python (đúng/sai và rỗng). Đưa chúng vào danh sách từ khóa để tránh việc người dùng gán lại giá trị khác làm sai lệch toàn bộ logic của chương trình.
+
+Hoạt động 5:
+Bài 5.1 - Giải thích toán tử:
+/ và //: Toán tử / dùng để chia số thực (kết quả luôn ra float, ví dụ 17 / 5 = 3.4). Còn // là chia lấy phần nguyên (17 // 5 = 3).
+% và //: // lấy phần thương (phần nguyên), còn % lấy phần dư còn lại của phép chia (17 % 5 = 2).
+
+Bài 5.4
+print(2 + 3 * 4 ** 2): Kết quả là 50 (tính 4**2 = 16, sau đó 3*16 = 48, cuối cùng 2+48 = 50).
+print((2 + 3) * 4 ** 2): Kết quả là 80 (tính ngoặc (2+3)=5, 4**2=16, sau đó 5*16 = 80).
+print(10 > 5 and 3 < 1 or not False): Kết quả là True (10>5 là True, 3<1 là False -> True and False = False. not False là True -> False or True = True).
+
+Hoạt động 6:
+Vì sao biến trong Python mang được nhiều kiểu dữ liệu (Dynamic typing) khác với C/C++/Java:
+Trong Python, biến giống như một cái nhãn trỏ tới giá trị trong bộ nhớ. Khi mình gán bien = 10 thì nhãn bien trỏ tới số 10. Gán tiếp bien = "Xin chao" thì nhãn chuyển sang trỏ tới chuỗi. Kiểu dữ liệu nằm ở giá trị chứ không nằm ở tên biến.
+Còn trong C/C++/Java (Static typing), mình phải khai báo rõ kiểu như int bien = 10;. Lúc này bien bị cố định kiểu int, không thể gán chuỗi hay kiểu khác vào được, nếu cố gán sẽ bị lỗi ngay từ lúc biên dịch.
