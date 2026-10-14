@@ -7,10 +7,10 @@ def khi_click_chuot(event):
     nhan_thong_bao.config(text=f"Ban vua click tai toa do: ({event.x}, {event.y})")
 
 cua_so = tk.Tk()
-cua_so.title("Vi du bind()")
+cua_so.title("Ví dụ bind()")
 cua_so.geometry("400x250")
 
-nhan_thong_bao = tk.Label(cua_so, text="Hay go phim hoac click chuot", font=("Arial", 12))
+nhan_thong_bao = tk.Label(cua_so, text="Hãy gõ phím hoặc click chuột", font=("Arial", 12))
 nhan_thong_bao.pack(pady=30)
 
 cua_so.bind("<Key>", khi_go_phim)

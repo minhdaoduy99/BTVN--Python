@@ -5,7 +5,7 @@ def xu_ly_submit():
     tuoi = entry_tuoi.get()
     email = entry_email.get()
     nhan_ket_qua.config(
-        text=f"Da nhan: {ho_ten} - {tuoi} tuoi - {email}"
+        text=f"Đã nhận: {ho_ten} - {tuoi} tuổi - {email}"
     )
 
 def xu_ly_xoa():
@@ -15,15 +15,15 @@ def xu_ly_xoa():
     nhan_ket_qua.config(text="")
 
 cua_so = tk.Tk()
-cua_so.title("Form nhap thong tin")
+cua_so.title("Form nhập thông tin")
 cua_so.geometry("400x280")
 cua_so.resizable(False, False)
 
-tk.Label(cua_so, text="Ho ten:").grid(row=0, column=0, padx=10, pady=10, sticky="w")
+tk.Label(cua_so, text="Họ tên:").grid(row=0, column=0, padx=10, pady=10, sticky="w")
 entry_ho_ten = tk.Entry(cua_so, width=25)
 entry_ho_ten.grid(row=0, column=1, padx=10, pady=10)
 
-tk.Label(cua_so, text="Tuoi:").grid(row=1, column=0, padx=10, pady=10, sticky="w")
+tk.Label(cua_so, text="Tuổi:").grid(row=1, column=0, padx=10, pady=10, sticky="w")
 entry_tuoi = tk.Entry(cua_so, width=25)
 entry_tuoi.grid(row=1, column=1, padx=10, pady=10)
 
@@ -34,7 +34,7 @@ entry_email.grid(row=2, column=1, padx=10, pady=10)
 nut_submit = tk.Button(cua_so, text="Submit", command=xu_ly_submit)
 nut_submit.grid(row=3, column=0, padx=10, pady=15, sticky="e")
 
-nut_xoa = tk.Button(cua_so, text="Xoa", command=xu_ly_xoa)
+nut_xoa = tk.Button(cua_so, text="Xoá", command=xu_ly_xoa)
 nut_xoa.grid(row=3, column=1, padx=10, pady=15, sticky="w")
 
 nhan_ket_qua = tk.Label(cua_so, text="", font=("Arial", 11), fg="blue")
